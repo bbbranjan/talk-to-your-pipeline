@@ -105,8 +105,6 @@ demo/
 
 ## Student Setup Guide
 
-Send this **at least 3 days before** the session.
-
 ### 1. Java 11+
 
 ```bash
