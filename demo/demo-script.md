@@ -27,18 +27,19 @@
 
 Have results pre-run and `results/himes/multiqc/multiqc_report.html` open before the session.
 
-### Download FASTQs with fetchngs
+### Download FASTQs via curl
 
 ```bash
-nextflow run nf-core/fetchngs -r dev \
-    --input data/sample-ids.csv \
-    --outdir data/fetchngs_results \
-    --nf_core_pipeline rnaseq \
-    -profile singularity \
-    -c nextflow.config
+mkdir -p data/fastq
+for acc in SRR1039508 SRR1039509 SRR1039512 SRR1039513; do
+    curl -O --output-dir data/fastq \
+        "https://sra-pub-run-odp.s3.amazonaws.com/sra/${acc}/${acc}_1.fastq.gz"
+    curl -O --output-dir data/fastq \
+        "https://sra-pub-run-odp.s3.amazonaws.com/sra/${acc}/${acc}_2.fastq.gz"
+done
 ```
 
-FASTQs land in `data/fetchngs_results/fastq/`. The custom samplesheet in `data/samplesheet.csv` uses these paths.
+FASTQs land in `data/fastq/`. The samplesheet in `data/samplesheet.csv` uses these paths.
 
 ### Run nf-core/rnaseq
 
@@ -101,6 +102,6 @@ demo/
 ├── prompts.md              # The 4 demo prompts
 ├── demo-script.md          # This file
 └── data/
-    ├── sample-ids.csv      # 4 SRR accessions for fetchngs
+    ├── sample-ids.csv      # 4 SRR accessions
     └── samplesheet.csv     # nf-core/rnaseq samplesheet (local FASTQ paths)
 ```

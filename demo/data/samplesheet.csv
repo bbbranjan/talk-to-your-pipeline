@@ -1,5 +1,5 @@
 sample,fastq_1,fastq_2,strandedness
-N61311_untreated,data/fetchngs_results/fastq/SRR1039508_1.fastq.gz,data/fetchngs_results/fastq/SRR1039508_2.fastq.gz,auto
-N61311_dex,data/fetchngs_results/fastq/SRR1039509_1.fastq.gz,data/fetchngs_results/fastq/SRR1039509_2.fastq.gz,auto
-N052611_untreated,data/fetchngs_results/fastq/SRR1039512_1.fastq.gz,data/fetchngs_results/fastq/SRR1039512_2.fastq.gz,auto
-N052611_dex,data/fetchngs_results/fastq/SRR1039513_1.fastq.gz,data/fetchngs_results/fastq/SRR1039513_2.fastq.gz,auto
+N61311_untreated,data/fastq/SRR1039508_1.fastq.gz,data/fastq/SRR1039508_2.fastq.gz,auto
+N61311_dex,data/fastq/SRR1039509_1.fastq.gz,data/fastq/SRR1039509_2.fastq.gz,auto
+N052611_untreated,data/fastq/SRR1039512_1.fastq.gz,data/fastq/SRR1039512_2.fastq.gz,auto
+N052611_dex,data/fastq/SRR1039513_1.fastq.gz,data/fastq/SRR1039513_2.fastq.gz,auto

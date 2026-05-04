@@ -52,7 +52,7 @@ The entire live demo is driven by 4 Copilot Chat prompts. See [`demo/prompts.md`
 | 0–5   | Hook                       | The reproducibility problem: methods section with no versions  |
 | 5–15  | Concepts                   | Nextflow mental model (processes, channels, config)            |
 | 15–25 | Dataset + pipeline choice  | Prompt 1 — identify the pipeline from biology                  |
-| 25–35 | Data download              | Prompt 2 — fetchngs, samplesheet                               |
+| 25–35 | Data download              | Prompt 2 — curl download, samplesheet                          |
 | 35–45 | Cluster configuration      | Prompt 3 — SLURM config, params file                           |
 | 45–55 | Submit + results           | Prompt 4 — run, monitor, pre-run MultiQC walkthrough           |
 | 55–60 | When to trust AI           | Structured reflection + failure cases                          |
@@ -97,7 +97,7 @@ demo/
 ├── prompts.md              # The 4 demo prompts
 ├── demo-script.md          # Presenter notes and walkthrough
 └── data/
-    ├── sample-ids.csv      # 4 SRR accessions for fetchngs
+    ├── sample-ids.csv      # 4 SRR accessions
     └── samplesheet.csv     # nf-core/rnaseq samplesheet (local FASTQ paths)
 ```
 
