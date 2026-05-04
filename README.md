@@ -118,7 +118,7 @@ Write me a params.yml file for this.
 
 Then show how to use it:
 ```bash
-nextflow run nf-core/rnaseq -profile docker --params-file my_params.yml --outdir results
+nextflow run nf-core/rnaseq -profile docker -params-file my_params.yml --outdir results
 ```
 
 ### Scenario 3 — Troubleshooting an error (8 min)
@@ -196,8 +196,27 @@ docker run hello-world
 
 ### 4. VS Code + extensions
 
-- **GitHub Copilot** (requires GitHub account + Copilot subscription or student access)
-- **Nextflow** extension by Nextflow (syntax highlighting)
+VS Code is free and open source — download from https://code.visualstudio.com.
+
+Install two extensions (search in the Extensions panel, `⇧⌘X` / `Ctrl+Shift+X`):
+
+- **GitHub Copilot** — see access note below
+- **Nextflow** by Nextflow (syntax highlighting)
+
+#### GitHub Copilot access
+
+GitHub Copilot has a **free tier** that requires no credit card — just a GitHub account:
+
+- 2,000 code completions per month
+- 50 Copilot Chat messages per month
+
+The free tier is enough to follow this session. To check or activate it:
+
+1. Go to [github.com/settings/copilot](https://github.com/settings/copilot)
+2. Sign in with your GitHub account (create one free at github.com if you don't have one)
+3. Select the free plan if prompted
+
+Once activated, sign in to GitHub Copilot inside VS Code via the Accounts menu (bottom-left corner).
 
 ### 5. Pre-flight check
 

@@ -1,24 +1,25 @@
-# nf-core/rnaseq params for Himes et al. 2014 (GSE52778)
-# Human airway smooth muscle cells — dexamethasone vs untreated
-# Genome: GRCh38 (hg38), Ensembl 110
+# nf-core/rnaseq — Himes et al. 2014 (GSE52778)
+# Human airway smooth muscle cells: dexamethasone vs untreated
+# 4 samples (2 donors × 2 conditions)
 
-input: "data/samplesheet.csv"
-outdir: "results"
+input:  "data/fetchngs_results/samplesheet/samplesheet.csv"
+outdir: "results/himes"
 
-# Reference genome
+# Reference — GRCh38 via nf-core iGenomes (pre-built STAR index, no local download needed)
 genome: GRCh38
 
 # Alignment
-aligner: star_salmon       # STAR alignment + Salmon quantification
-pseudo_aligner: salmon     # also run Salmon in quasi-mapping mode for speed comparison
+aligner: star_salmon
 
 # Trimming
 trimmer: trimgalore
 min_trimmed_reads: 10000
 
 # QC
-skip_dupradar: false       # run dupradar (optional, slower — set true to skip)
-skip_deseq2_qc: false      # run nf-core DESeq2 QC plots
+skip_dupradar: true
+skip_deseq2_qc: false
 
-# Strandedness — let the pipeline detect it
-# (original protocol is unstranded, but auto is safer for a demo)
+# Resource caps — keeps the pipeline within laptop limits
+max_cpus:   6
+max_memory: '16.GB'
+max_time:   '24.h'

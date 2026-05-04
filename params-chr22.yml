@@ -1,0 +1,9 @@
+input: "data/samplesheet-chr22.csv"
+fasta: "data/reference/chr22.fa"
+gtf: "data/reference/chr22.gtf"
+aligner: "star"
+quantification_method: "salmon"
+strandedness: "auto"
+skip_dupradar: true
+save_reference: true
+outdir: "results/chr22"

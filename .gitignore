@@ -1,0 +1,16 @@
+# Nextflow runtime
+.nextflow/
+.nextflow.log*
+work/
+null/
+
+# Results (large, reproducible)
+results/
+demo/data/fetchngs_results/
+
+# macOS
+.DS_Store
+
+# Backups
+*.key.bak
+session-slides-backup.key
