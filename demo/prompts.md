@@ -7,9 +7,9 @@ Paste each prompt in order into **Copilot Chat** (`⇧⌘I` macOS / `Ctrl+Shift+
 ## Prompt 1 — Identify the pipeline
 
 ```
-I found a 2014 RNA-seq paper: Himes et al., PLoS ONE, GSE52778.
+I found a paper: Himes et al. (2014), PLoS ONE, GSE52778.
 The experiment compared dexamethasone-treated vs untreated primary human
-airway smooth muscle cells from 4 independent donors. Paired-end RNA-seq.
+airway smooth muscle cells from 4 independent donors.
 Data is deposited on SRA as accessions SRR1039508–SRR1039521. I only want to use the following samples:
 - SRR1039508: donor N61311, untreated
 - SRR1039509: donor N61311, dexamethasone-treated
@@ -24,7 +24,7 @@ What NextFlow pipeline should I use to process this?
 ## Prompt 2 — Download the data
 
 ```
-Can you download the FASTQ files for these samples from SRA using curl and prepare them as input for nf-core/rnaseq?
+Can you download the FASTQ files for these samples using the SRA-Toolkit module and prepare them as input for nf-core/rnaseq?
 ```
 
 ---
